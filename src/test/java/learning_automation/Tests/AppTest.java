@@ -30,7 +30,6 @@ public static void main(String[] args) {
 
                 QuizPage quizPage = new QuizPage(driver);
                 quizPage.quizData();
-
             }
             catch(Exception e){
                 e.printStackTrace();

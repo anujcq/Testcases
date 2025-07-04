@@ -52,7 +52,7 @@ public class Signup {
                 driver.findElement(By.id("mobile")).sendKeys("1234567890");
 
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@type=\"submit\"]"))).click();
-                Thread.sleep(1000);
+                Thread.sleep(2000);
 
 
                 wait.until(ExpectedConditions.presenceOfElementLocated(
