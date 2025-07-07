@@ -1,13 +1,8 @@
 package learning_automation;
 
-import java.io.File;
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -24,10 +19,15 @@ public class CurrentSection {
     }
 
     public void SolveAllQuestions() throws Exception {
-        List<WebElement> sections = driver.findElements(
-                By.xpath("//*[@class='dashboard-segment-container ' or @class='dashboard-segment-container active'] "));
-            System.out.println(sections.size());
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        List<WebElement> sections = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+                By.xpath("//*[@class='dashboard-segment-container ' or @class='dashboard-segment-container active'] ")));
+            System.out.println("sec size "+ sections.size());
+
         WebElement currentSection = sections.get(secCount);
+        wait.until(ExpectedConditions.visibilityOf(currentSection));
+
         List<WebElement> questions = currentSection.findElements(By.xpath(".//tbody/tr"));
         System.out.println(questions.size());
 

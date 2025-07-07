@@ -31,7 +31,7 @@ public class McqQuestion {
             System.out.println("No MCQ options found!");
         }
         driver.findElement(By.xpath("//button/span[text()='submit']")).click();
-         driver.findElement(By.xpath("//div[@class = 'app-logo']/button")).click();
+        driver.findElement(By.xpath("//div[@class = 'app-logo']/button")).click();
     }
 
 }
