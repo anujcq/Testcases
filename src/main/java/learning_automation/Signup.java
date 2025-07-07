@@ -50,8 +50,7 @@ public class Signup {
 
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@type=\"submit\"]"))).click();
                 Thread.sleep(2000);
-
-
+                
                 wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//div[contains(@class, 'start-quiz-container')]/button"))).click();
     }

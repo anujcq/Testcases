@@ -16,8 +16,8 @@ public class AppTest {
 public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
         System.out.println("Enter number of emails to be created:");
-        // int n = scan.nextInt();
-        int n = 1;
+        int n = scan.nextInt();
+
         WebDriver driver = null;
 
         for(int i =0;i<n;i++){
